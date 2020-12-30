@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  messages:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      spring.redis.host: redis
+  redis:
+    image: "redis:6.0.9-alpine"
+    ports:
+      - "6379:6379"
