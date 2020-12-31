@@ -1,11 +1,11 @@
 ### JAVA HOME ASSIGNMENT SKF AI
 
-##### How to build it:
-`mvn clena install
-`
+#### How to build it:
+`mvn clean install`
 
 For build use JDK 1.8 (Oracle or OpenJdk) and maven
-##### How to run it with docker-compose:
+
+#### How to run it with docker-compose:
 `docker-compose up`
 
 #### API usage examples:
@@ -28,8 +28,9 @@ For build use JDK 1.8 (Oracle or OpenJdk) and maven
 
 ##### Retrieve the last message that was on the REDIS server 
 ###### Request:
-    GET http://localhost:8080/getByTime?start=1609369070039&end=1609372360483
-    Accept: application/json
+    GET http://localhost:8080/getLast
+    Accept: */*
+    Cache-Control: no-cache
 ###### Response:
     HTTP/1.1 200 
     Content-Type: application/json
@@ -44,9 +45,8 @@ For build use JDK 1.8 (Oracle or OpenJdk) and maven
 
 ##### Retrieve all messages that were on the REDIS server
 ###### Request:
-    GET http://localhost:8080/getLast
-    Accept: */*
-    Cache-Control: no-cache
+    GET http://localhost:8080/getByTime?start=1609369070039&end=1609372360483
+    Accept: application/json
 ###### Response:
     HTTP/1.1 200 
     Content-Type: application/json
