@@ -8,7 +8,10 @@ For build use JDK 1.8 (Oracle or OpenJdk) and maven
 #### How to run it with docker-compose:
 `docker-compose up`
 
+---
 #### API usage examples:
+##### Important: 
+In some requests have been changed the method type. This was done for reasons of the basic concepts of REST API design
 
 ##### Publish new messages to the REDIS server 
 ###### Request:
